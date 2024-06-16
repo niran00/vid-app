@@ -1,27 +1,33 @@
-# VidApp
+# Getting started 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+Run npm install in this current directory. 
 
-## Development server
+## Starting Angular 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+You should see our frontend working in the browsers. 
 
-## Code scaffolding
+## Setting up the the database. 
+Create a new database in postgres (I named mine demo-db). 
+Use the dbBk.sql in this directory, to restore your newly created database.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Connecting the database to the backend. 
+Inside, /backend/serve.js and search for "Database details"
 
-## Build
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'demo-db',
+  password: 'postgres',
+  port: 5433, 
+  <!-- Default port is 5432 -->
+});
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+These are the configuration I used on machine, however the default port for postgres is 5432. 
 
-## Running unit tests
+## Starting up the backend. 
+In your terminal, navigate to backend and run npm install. 
+Once that is complete you can run " node serve.js " the backend will begin to run on port 3000. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

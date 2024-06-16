@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'upload', component: UploadComponent, canActivate: [AuthGuard]  },
-  { path: 'player', component: PlayerComponent },
+  { path: 'player', component: PlayerComponent, canActivate: [AuthGuard]  },
   // Other routes
 ];
 
