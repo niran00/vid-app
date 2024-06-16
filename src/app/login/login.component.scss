@@ -1,0 +1,36 @@
+.login-card {
+  margin: auto;
+  text-align: center;
+  max-width: 400px; 
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-input {
+  width: 100%; 
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 100%; 
+  margin-top: 16px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.error-message {
+  color: red;
+}

@@ -1,0 +1,21 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            <h2>{{ videoTitle }}</h2>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="videoPath">
+          <video width="1000px" controls>
+            <source [src]="'http://localhost:3000/' + videoPath" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div *ngIf="!videoPath">
+          <p>No video to play</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

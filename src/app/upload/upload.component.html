@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <mat-card style="max-width: 50%;">
+
+    <mat-card-content class="full-width">
+      <button *ngIf="!file" mat-flat-button color="primary" (click)="fileUpload.click()">
+        Select file
+      </button>
+
+      <input mat-raised-button color="primary" type="file" class="file-input" (change)="onChange($event)" #fileUpload style="display: none;" />
+
+      <div *ngIf="file">
+        <section class="file-info">
+          File details:
+          <ul>
+            <li>Name: {{file.name}}</li>
+            <li>Type: {{file.type}}</li>
+            <li>Size: {{file.size}} bytes</li>
+          </ul>
+        </section>
+
+        <button class="upload-btn" mat-flat-button color="primary" (click)="onUpload()">
+          Upload the file
+        </button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
